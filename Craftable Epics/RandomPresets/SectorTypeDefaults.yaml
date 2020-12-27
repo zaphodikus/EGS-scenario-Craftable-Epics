@@ -1,0 +1,214 @@
+---
+# for 3D map purposes, limit climate (optional for non-terrain types) to one of Lava, Temperate, Snow, Desert, Alien, or Barren
+  PlanetTypes:      # come up with general categories of planet (playfield) types for distance purposes
+      - Name: Lava 
+        Color: [0.98, 0.4, 0]
+        Icon: Circle
+        Distance: [100, 300]
+        MoonProb: 0.5
+        MoonType: [MoonNascent]   
+        Climate: Lava      # added for description text prior to writing files
+        PlayfieldLevel: [1,5]
+        Playfields:
+          - Lava
+      - Name: Barren 
+        Color: [0.29, 0.30, 0.04]
+        Icon: Circle
+        Distance: [120, 400]
+        MoonProb: 0.5
+        MoonType: [MoonLava, DefaultMoon]   
+        Climate: Barren 
+        PlayfieldLevel: [1,5]
+        Playfields:
+          - Barren
+      - Name: Desert 
+        Color: [0.65, 0.42, 0.09]
+        Icon: Circle
+        Distance: [175, 350]
+        MoonProb: 0.5     
+        MoonType: [MoonLava, DefaultMoon]   
+        # OrbitType: [DefaultOrbit, AsteroidField2]      
+        Climate: Desert
+        PlayfieldLevel: [1,5]
+        Playfields:
+          - Desert
+      - Name: Arid 
+        Color: [0.70, 0.42, 0.09]
+        Icon: Circle
+        Distance: [300, 500]
+        MoonProb: 0.5     
+        MoonType: [MoonLava, DefaultMoon]   
+        Climate: Arid
+        PlayfieldLevel: [1,5]
+        Playfields:
+          - Arid
+      - Name: AridStarter
+        Color: [0.65, 0.42, 0.09]
+        Icon: Circle
+        Distance: [300, 500]
+        PlayerStart: true
+        OrbitType: [OrbitStarter]         
+        MoonProb: 1
+        MoonType: [MoonStarter]       
+        Climate: Arid
+        PlayfieldLevel: [2,2]
+        Playfields:
+          - AridStarter
+      - Name: TemperateStarter
+        Color: [0.29, 0.47, 0.09]
+        Icon: Circle
+        Distance: [400, 850]
+        PlayerStart: true
+        # Neighbor 'Name, Probability [0..1]' 
+        Neighbor: 
+          - Snow, 1
+          - SpaceTradingStation, 0.3
+        OrbitType: [OrbitStarter]         
+        MoonProb: 1
+        MoonType: [MoonStarter]       
+        Climate: Temperate
+        PlayfieldLevel: [1,1]
+        Playfields:
+          - TemperateStarter
+      - Name: TemperateSwampStarter
+        Color: [0.23, 0.25, 0.06]
+        Icon: Circle
+        Distance: [400, 850]
+        PlayerStart: true
+        Neighbor: 
+          - Snow, 1
+          - SpaceTradingStation, 0.3
+        OrbitType: [OrbitStarter]         
+        MoonProb: 1
+        MoonType: [MoonStarter]       
+        Climate: Temperate
+        PlayfieldLevel: [2,2]
+        Playfields:
+          - TemperateSwampStarter
+      - Name: Temperate
+        Color: [0.03, 0.5, 0.1]
+        Icon: Circle
+        Distance: [400, 850]
+        MoonProb: 0.85
+        # MoonCount: [2,4]
+        MoonType: [MoonLava, MoonIce, DefaultMoon]   
+        Climate: Temperate
+        PlayfieldLevel: [2,4]
+        Playfields:
+          - TemperateSwamp, 0.7
+          - Temperate, 0.4
+      - Name: Alien
+        Color: [0.48, 0.09, 0.35]
+        Icon: Circle
+        Distance: [300, 1000] 
+        MoonProb: 0.5   
+        MoonType: [MoonLava, DefaultMoon]              
+        Climate: Alien
+        PlayfieldLevel: [1,5]
+        Playfields:
+          - Alien
+      - Name: Snow
+        Color: [0.8, 0.8, 0.8]
+        Icon: Circle
+        Distance: [850, 1200]
+        MoonProb: 0.7
+        MoonType: [MoonIce, DefaultMoon]       
+        Climate: Snow
+        MoonCount: [2,2]
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - Snow
+
+  # ======== Moon Types ================
+  MoonTypes:
+      - Name: DefaultMoon          # definition of default name 'DefaultMoon' is mandatory
+        Color: [0,0,0]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - Moon 
+      - Name: MoonStarter
+        Color: [0,0,0]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - MoonStarter 
+      - Name: MoonIce
+        Color: [0,0,0]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - MoonIce    
+      - Name: MoonLava
+        Color: [0,0,0]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - MoonLava  
+            - MoonLava2    
+      - Name: MoonNascent
+        Color: [0,0,0]
+        Icon: No
+        Distance: [6000, 12000]
+        HasOrbit: false
+        HasTerrain: true
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - MoonNascent 
+
+  # ======== POIs ================
+  AsteroidFieldTypes:
+      - Name: AsteroidField
+        Color: [0.3, 0.3, 0.3]
+        Icon: Rhombus
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - SpaceAsteroidField
+            
+  # ======== Stations ================            
+  StationTypes:
+      - Name: SpaceTradingStation
+        Color: [0.7, 0.5, 0.0]
+        Icon: Kite
+        Distance: [200, 1200]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - SpaceTradingStation
+            
+  # ======== OrbitTypes ================
+  OrbitTypes:
+      - Name: DefaultOrbit     # definition of default name 'DefaultOrbit' is mandatory
+        Color: [0.3, 0.3, 0.3]
+        Icon: Rhombus
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,5]
+        Playfields:
+            - SpaceOrbit
+      - Name: OrbitStarter
+        Color: [0.3, 0.3, 0.3]
+        Icon: Rhombus
+        Distance: [270, 870]
+        HasOrbit: false
+        HasTerrain: false
+        PlayfieldLevel: [1,1]
+        Playfields:
+            - SpaceOrbitStarter 

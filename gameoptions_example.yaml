@@ -1,0 +1,190 @@
+### Game Options
+### ------------
+### Shows available parameters and their default value.
+### If needed change a value and uncomment the respective line.
+### For local Coop, the MP setting is relevant.
+
+
+### Dataset selector: The first possible set is used. Allowed: 'Survival' or 'Creative' and 'MP' or 'SP' -- missing part = no restriction
+# ValidFor: 
+
+### Time after which player-built structures without core or less than 10 blocks get removed when not visited (0 = disabled)
+# DecayTime: 24
+
+### Time after which any player-built structures get removed when not visited (0 = disabled)
+# WipeTime: 0
+
+### Time during which structures are offline protected [in real time hours]
+# ProtectTime: 48
+
+### Delay until the offline protection is enabled [in real time sec]
+# ProtectDelay: 300
+
+### Max number of structures per playfield (limit = 255, reduce if you have performance problems)
+# MaxStructures: 200
+
+### Distance (in m) around a faction's base where no other faction's base can be built in PvE playfields (0 = disabled). Note: If 'LandClaimZone: Device' is set in playfield.yaml, AntiGriefZones will only exist for structures that have a Landclaim Device.
+# AntiGriefDistancePvE: 30
+
+### Distance (in m) around a faction's base where no other faction's base can be built in PvP playfields (0 = disabled). Enable to avoid griefing when using offline protection. Note: If 'LandClaimZone: Device' is set in playfield.yaml, AntiGriefZones will only exist for structures that have a Landclaim Device.
+# AntiGriefDistancePvP: 300
+
+### Distance (in m) around ore deposits where no other faction's base can be built (0 = disabled)
+# AntiGriefOresDistance: 30
+
+### Playfield type where the AntiGriefOresDistance is valid
+### Possible values: All, PvP, PvE
+# AntiGriefOresZone: PvE
+
+### Determines what kinds of trading is enabled, e.g. player-to-player or player-to-NPC (not all settings are implemented / suppported)
+### Possible values: None, GlobalVirtual, LocalPlayerToPlayer, LocalPlayerToSystem, Local, GlobalPlayerToPlayer, Player2Player, GlobalPlayerToSystem, Player2System, Global, All, GlobalEverywhere
+# EnableTrading: All
+
+### Enable or disable the max counting of blocks such as the weapon limit
+### Possible values: true, false
+# EnableMaxBlockCount: true
+
+### Enable or disable the volume and weight limit
+### Possible values: true, false
+# EnableVolumeWeight: false
+
+### Enable or disable the CPU points limit (note that CPU Points are still an experimental, work-in-progress feature that is not fully balanced yet - only enable it if you want to test it and give us feedback)
+### Possible values: true, false
+# EnableCPUPoints: false
+
+### Enable or disable whether autominers deplete resource deposits
+### Possible values: true, false
+# AutoMinerDepletion: true
+
+### Enable or disable whether blueprints must be placed on a base or capital vessel when being spawned
+### Possible values: true, false
+# GroundedStructureSpawn: true
+
+### Enable or disable check that disables turrets when they are placed below the terrain / water level
+### Possible values: true, false
+# TurretUndergroundCheck: false
+
+### The name of the default Origin
+# OriginDefault: Neutral
+
+### False will not allow any alliances with or join to factions from other Origins
+### Possible values: true, false
+# OriginAccessOthers: true
+
+### Factions are per default allied if they are in the same Origin
+### Possible values: true, false
+# OriginAutoAlliance: true
+
+### False will not damage any allied structure even in PvP. Will still hurt players!
+### Possible values: true, false
+# FriendlyFireInPvP: true
+
+### Max number of NPCs that are spawned around a player
+# MaxSpawnedEnemies: 50
+
+### Per default the escape pod will not despawn any more to allow a player base and sleep till the morning in SP
+### Possible values: true, false
+# DespawnEscapePod: false
+
+### Set to true to allow POI regeneration
+### Possible values: true, false
+# RegeneratePOIs: false
+
+### Set transparency of 'Fog-of-War': 0 to 100 => opaque to completely transparent (invisible)
+# FOWTransparency: 0
+
+### Delay when structures will be unloaded if no player is near it (set to 0 to disable DSL)
+# DSLUnloadSecs: 30
+
+### Distance at which a structure on a planet will be invisible and finally unloaded if no player is near it. Minimum is 600
+# DSLDistancePlanet: 1200
+
+### Distance at which a structure in space will be invisible and finally unloaded if no player is near it. Minimum is 1500
+# DSLDistanceSpace: 3000
+
+### Forces all playfield to be PvP. Useful for coop games
+### Possible values: true, false
+# ForcePvP: false
+
+### Player joining a game will always be in a default faction unique to the Origin. Useful for coop games
+### Possible values: true, false
+# OriginFactionStart: false
+
+### If true, the scenario will be managed for score and other statistics, timers and other related data.
+### Possible values: true, false
+# IsManagedScenario: false
+
+### If true, a thruster needs open space behind it to work. Otherwise, the thruster will be deactivated.
+### Possible values: true, false
+# ThrustersNeedOpenSpace: false
+
+### Permission for spawning Blueprints below terrain
+### Possible values: Always, PvE, Never
+# UndergroundBpSpawn: Always
+
+### Switches some privacy settings for clients on/off
+### Possible values: true, false
+# ClientPrivacy: true
+
+### --- Difficulty settings ---
+### Notice: Changing some of the difficulty settings require to start a new game in order to take effect
+### - PLAYER -----------------------------------------------------------------------------------
+### Determines the content of your equipment when you start a new game
+### Possible values: Easy, Medium, Hard
+# DiffEscapePodContent: Medium
+
+### Influences the overall player progression speed by earning more or less XP
+### Possible values: Faster, Normal, Slower
+# DiffPlayerProgression: Normal
+
+### Influences the speed of degradation when using weapons and tools
+### Possible values: Low, Normal, High, Off
+# DiffDegradationSpeed: Normal
+
+### Sets the backpack drop mode on death of players
+### Possible values: DropNothing, DropBagOnly, DropEverything
+# DiffPlayerBackpackDrop: DropEverything
+
+### - LIFE STATS -------------------------------------------------------------------------------
+### Influences the speed of food consumption
+### Possible values: Low, Normal, High, Off
+# DiffFoodConsumption: Normal
+
+### Influences the speed of oxygen consumption
+### Possible values: Low, Normal, High, Off
+# DiffOxygenConsumption: Normal
+
+### Influences the impact of temperature and radiation on the player
+### Possible values: Low, Normal, High, Off
+# DiffRadiationTemperature: Normal
+
+### - RESOURCES --------------------------------------------------------------------------------
+### Influences the average amount of ore that a deposit contains
+### Possible values: Rich, Normal, Poor
+# DiffAmountOfOre: Normal
+
+### Influences the average number of deposits per planet
+### Possible values: Plenty, Normal, Few
+# DiffNumberOfDeposits: Normal
+
+### - ENEMIES ----------------------------------------------------------------------------------
+### Influences the overall difficulty when attacking enemies
+### Possible values: Easy, Medium, Hard
+# DiffAttackStrength: Medium
+
+### Influences the overall number of drones that are present on a planet
+### Possible values: Low, Normal, High, Off
+# DiffDronePresence: Normal
+
+### Influences the frequency of the drone base attacks
+### Possible values: Low, Normal, High, Off
+# DiffDroneBaseAttack: Normal
+
+### - CONSTRUCTION -----------------------------------------------------------------------------
+### Influences the overall craft speed of constructors
+### Possible values: Faster, Normal, Slower, Instant
+# DiffConstrCraftTime: Normal
+
+### Influences the overall production speed of the blueprint factory and the repair speed of the repair bay (Repair-2-Template and Repair Blocks)
+### Possible values: Faster, Normal, Slower, Instant
+# DiffBpProdTime: Normal

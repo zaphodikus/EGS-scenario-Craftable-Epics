@@ -1,0 +1,18 @@
+# used for unique syllable creation. Don't really need more than this due to categorized syllables
+Vowels: [a,e,i,o,u]
+Consonants: [b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z]
+ConsonantClusters: [br,ch,cl,cr,dr,fl,fr,gl,gr,pl,ph,pr,sc,sk,sl,sm,sh,sp,st,sw,th,tr,tw,wh]
+
+# These don't necessarily have to be demonic. It is simply some way to classify the sounds of the syllables. Could make up a Zirax/Talon language style?
+DemonicPrefixes: [aba,adra,ah,asm,ast,bas,bala,carn,dag,coy,damb,diab,fen,gor,hec,ish,kal,lil,lok,mam,man,mar,mel,meph,mor,pan,plu,pro,rimm,sab,sed,shai,shi,sup,tcho,typh]
+DemonicMidfixes: [add,rama,pu,lly,aro,pho,elz,hem,ant,ard,ut,uto,upa,cho]
+DemonicSuffixes: [ch,on,an,am,eus,zel,met,oth,erit,osh,eis,alia,alla,gon,gor,mon,tan,ios,ine,mah,es]
+
+# Same here, not necessarily need to be elfin. 
+ElfinPrefixes: [al,ala,ae,ael,aem,ai,ail,air,ak,ag,agi,al,alea,aly,ba,bae,be,bly,brae,bri,ca,cae,cal,cam,cau,ch,chi,ci,cir,co,coi,cho,cha,cys,cy,dae,dak,dio,dor,dal,ea,ed,edr,ela,eld,ele,eli,elo,elp,elr,elt,en,ent,ett,eth,ev,evi,ey,eyr,fae,fea,fal,fil,ho,fi,fre,fra,fea,fa,fen,fing,fin,fol,fo,faa,ga,gae,gal,gay,ghi,gi,gl,glo,gly,gw,gwy,gor,got,ha,haa,hae,hag,hal,har,has,hat,her,hif,hoc,hocc,hol,hyc,ia,ie,ih,il,ill,ilr,ilth,in,ini,io,ith,iy,iv,ir,im,iz,ja,jh,jo,hu,ka,kay,kea,kel,ke,kev,ku,kus,kuo,ky,kyr,kei,kyr,ker,kiv,kro,kym,la,laam,lae,laf,lam,lar,lash,lat,lath,lea,lhor,lor,lui,luth,luv,lya,ma,maa,mae,mar,ea,mea,mer,mi,mor,mai,mo,mor,mlo,mon,myr,myl,na,nae,nar,nap,nel,nev,nha,niev,nin,nlo,nop,nuv,nuo,nua,ner,nes,nest,nev,nyl,och,oen,oac,ol,aol,oli,olith,on,or,ory,os,osl,ori,orn,orr,ory,pha,phr,pyr,pur,pleu,pass,phae,phar,pyw,pyx,qi,qua,quy,quae,rae,rai,ral,rat,rath,rau,rel,res,rep,renn,rhe,rhi,rho,rhys,ril,ro,ru,rue,ruv,ruy,ry,ryvv,rae,rhi,rei,rie,ren,sa,say,sae,sael,shai,shar,saev,sudry,sash,sha,shal,shee,shie,sel,sham,shau,shev,shyr,sii,ska,son,sri,stro,sudry,sun,sylv,syth,syvi,tae,taen,taer,tak,tal,tali,tala,tass,tann,tehl,ther,thin,thra,toro,tri,tur,tam,tar,tara,tia,tsa,tyri,thie,tiar,tol,ua,ue,ul,uld,usu,uth,urm,usu,va,vae,val,vaa,van,vel,vele,vho,vha,vol,vor,vea,vest,via,wy,wi,wae,wyq,wyr,xa,xan,xh,ya,yal,yn,yr,yns,yhe,ylyn,ze,za,zae,zea,zan,zao,zel,zelph,zal,zy]
+ElfinMidfixes: [ar,ie,er,mer,ir,da,bi,bir,ae,ael,aely,bae,ia,ea,na,an,ra,ya,ym,yn,oi,or,en,la,in,il,da,ar,tho,on,eth,ual,ryn,min,arth,shal,ym,ibel,dacil,ris,rym,on,eron,tyni,arom,der,aela,phine,stel,istel,syr,vyr,asta,dryl,rha,ese,une,aera]
+ElfinSuffixes: [ia,ea,na,an,ra,ya,ym,yn,oi,or,en,la,in,il,da,ar,tho,on,eth,ual,ryn,min,arth,shal,ym,ibel,dacil,ris,rym,on,eron,tyni,arom,der,aela,phine,stel,istel,syr,vyr,asta,dryl,rha,ese,une,aera]
+
+# these will help in with the naming of the systems and stations, not necessarily planets
+LatinGenitiveSuffixes: [ae,arum,um,orum,i,an,cian,en,er,et,ide,ite,ure,al,ro,ta,vi,do,ao,di,mi,ti,da,ad,ade,adae,aure,aura,oura,eura,eure,oure]
+Greeks: [Alpha,Beta,Gamma,Delta,Epsilon,Zeta,Eta,Theta,Iota,Kappa,Lambda,Mu,Nu,Xi,Omicron,Pi,Rho,Sigma,Tau,Upsilon,Phi,Chi,Psi,Omega,Vega]
