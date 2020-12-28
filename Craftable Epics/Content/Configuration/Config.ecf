@@ -8,50 +8,6 @@ VERSION: 9
 
 
 # ==================== BLOCKS, DEVICES ==========================
-{ Item Id: 2053, Name: Minigun
-  PickupToToolbar: true
-  StackSize: 1
-  Category: Weapons/Items
-  Mass: 39, type: float, display: true, formatter: Kilogram
-  Volume: 20, type: float, display: true, formatter: Liter
-  Durability: 500, display: false
-  DegradationProb: 0.05, type: float, display: false
-  {
-    AllowRemote: false
-    ROF: 0.1, type: float, display: true, formatter: ROF
-    Range: 150, display: false
-    NoiseStrength: 120, display: false
-    CameraShake: 1
-    Automatic: true, display: true
-    BulletSpread: 0.0, display: true
-    Recoil: 0.0, display: true
-    Damage: 50, display: true
-    AmmoCapacity: 250, display: true
-    AmmoType: 8.3mmBullet, display: true
-    ReloadDelay: 3.9, display: true
-    Tracer: Weapons/Projectiles/TracerOrange1
-    DamageMultiplier_1: 1.5, data: head, display: DmgMultiplierHead
-    DamageMultiplier_2: 0.09, data: wood
-    DamageMultiplier_3: 0, data: dirt|stone|rock|hullarmored|hullcombat
-    DamageMultiplier_4: 0, data: shield
-  }
-  UnlockCost: 17, display: true
-  UnlockLevel: 15, display: true
-  TechTreeParent: AssaultRifleT2
-  TechTreeNames: Weapons
-}
-
-{ Template Name: FusionCell
-  OutputCount: 2
-  CraftTime: 15
-  DeconOverride: Stop
-  Target: AdvC
-  { Child Inputs
-    PromethiumPellets: 50
-    HydrogenBottle: 10
-  }
-}
-
 
 # uses 4x the material for a base ore and almost 3x longer to make
 { Template Name: MagnesiumOre, Ref: OreTemplate
@@ -80,41 +36,6 @@ VERSION: 9
   UnlockCost: 0
   UnlockLevel: 10
   Category: Components
-}
-
-{ Template Name: PromethiumPellets
-  OutputCount: 20  # doubled
-  CraftTime: 5
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    PromethiumOre: 1
-  }
-}
-
-{ Template Name: MagnesiumPowder
-  OutputCount: 20  # doubled
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    MagnesiumOre: 5
-  }
-}
-
-{ Template Name: EnergyCell
-  OutputCount: 4  # doubled
-  CraftTime: 5
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    PromethiumPellets: 11
-  }
-}
-{ Template Name: EnergyCellLarge
-  OutputCount: 4  # doubled
-  CraftTime: 15
-  Target: "LargeC,AdvC"
-  { Child Inputs
-    PromethiumPellets: 50
-  }
 }
 
 { Item Id: 2353, Name: Fiber, Ref: ComponentsTemplate
@@ -152,16 +73,6 @@ VERSION: 9
   }
 }
 
-{ Template Name: 5.8mmBullet
-  OutputCount: 150
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    SteelPlate: 8
-    CopperIngot: 4
-    NCPowder: 1  # nitrocellulose
-  }
-}
 
 { Item Id: 2071, Name: Chainsaw
   PickupToToolbar: true
@@ -193,55 +104,6 @@ VERSION: 9
   TechTreeNames: Tools
 }
 
-
-#################################################
-# All solar panels doubled
-{ Block Id: 1494, Name: SolarPanelBlocks
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-{ Block Id: 1496, Name: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-{ Block Id: 1497, Name: SolarPanelHorizontal, Ref: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-{ Block Id: 1498, Name: SolarPanelHorizontal2, Ref: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-{ Block Id: 1499, Name: SolarPanelHorizontalMount, Ref: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-
-{ Block Id: 1510, Name: SolarPanelSlope2, Ref: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-{ Block Id: 1511, Name: SolarPanelSlope3, Ref: SolarPanelSlope
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 7, display: true  # doubled
-}
-# small panels
-{ Block Id: 1513, Name: SolarPanelSmallBlocks
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 4.0, display: true  # doubled
-}
-{ Block Id: 1514, Name: SolarPanelSlope3Small
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 4.0, display: true  # doubled
-}
-{ Block Id: 1515, Name: SolarPanelSlopeSmall, Ref: SolarPanelSlope3Small
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 4.0, display: true  # doubled
-}
-{ Block Id: 1516, Name: SolarPanelHorizontalSmall, Ref: SolarPanelSlope3Small
-  MaxCount: 30, type: int, display: true  # doubled
-  SolarPanelEfficiency: 4.0, display: true  # doubled
-}
 
 # armor https://steamcommunity.com/app/383120/discussions/0/1747895465439059678/?ctp=2
 { Item Id: 2649, Name: ArmorMedium
@@ -332,7 +194,7 @@ VERSION: 9
     Electronics: 10
     CobaltAlloy: 10
     Motor: 2
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 
@@ -343,7 +205,7 @@ VERSION: 9
     SteelPlate: 10
     Electronics: 5
     Motor: 4
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 { Template Name: MultiBoost
@@ -353,7 +215,7 @@ VERSION: 9
     SteelPlate: 3
     Electronics: 5
     Nanotubes: 30
-    GoldIngot: 2
+    GoldIngot: 3
   }
 }
 
@@ -364,7 +226,7 @@ VERSION: 9
     SteelPlate: 6
     Electronics: 2
     Nanotubes: 10
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 { Template Name: InsulationBoost
@@ -374,7 +236,7 @@ VERSION: 9
     SteelPlate: 3
     Electronics: 5
     Nanotubes: 30
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 { Template Name: RadiationBoost
@@ -384,7 +246,7 @@ VERSION: 9
     SteelPlate: 5
     OpticalFiber: 10
     Nanotubes: 20
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 { Template Name: MobilityBoost
@@ -395,7 +257,7 @@ VERSION: 9
     Electronics: 5
     PlasticMaterial: 10
     Motor: 4
-    GoldIngot: 1
+    GoldIngot: 3
   }
 }
 
