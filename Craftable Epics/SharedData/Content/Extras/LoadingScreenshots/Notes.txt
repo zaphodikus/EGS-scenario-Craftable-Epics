@@ -1,0 +1,3 @@
+CE_lpsUseSpotlights
+CE_lpsBeWellPrepared
+CE_lpsFindGoodSpot

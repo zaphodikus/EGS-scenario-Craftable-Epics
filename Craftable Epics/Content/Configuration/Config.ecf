@@ -297,7 +297,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: AssaultRifle
   TechTreeNames: Weapons
@@ -338,7 +338,7 @@ VERSION: 9
     DamageMultiplier_3: 0, data: dirt|stone|rock|hullarmored|hullcombat
     DamageMultiplier_4: 0.2, data: shield
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: Minigun
   TechTreeNames: Weapons
@@ -380,7 +380,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: Shotgun2
   TechTreeNames: Weapons
@@ -410,7 +410,7 @@ VERSION: 9
     Recoil: 1.44, display: true
     ReloadDelay: 6, display: true
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: ScifiCannon
   TechTreeNames: Weapons
@@ -450,7 +450,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: PulseRifleT2
   TechTreeNames: Weapons
@@ -485,7 +485,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: RocketLauncherT2
   TechTreeNames: Weapons
@@ -523,7 +523,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
   TechTreeParent: LaserRifle
   TechTreeNames: Weapons
@@ -560,7 +560,7 @@ VERSION: 9
   }
   {
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 15
   TechTreeParent: PistolT2
   TechTreeNames: Weapons
@@ -592,7 +592,7 @@ VERSION: 9
     Radius: 3.5
     Range: 6, display: false
   }
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25    # changed
   TechTreeParent: DrillT2
   TechTreeNames: Tools
