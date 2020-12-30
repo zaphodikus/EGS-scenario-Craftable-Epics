@@ -113,23 +113,23 @@ VERSION: 9
   TechTreeNames: "Tools,Weapons"						# ADDED
 }
 { Item Id: 2650, Name: ArmorHeavy
-  UnlockCost: 13, display: true					# ADDED
-  UnlockLevel: 16, display: true				# ADDED
+  UnlockCost: 10, display: true					# ADDED
+  UnlockLevel: 15, display: true				# ADDED
   TechTreeParent: ArmorMedium					# ADDED
   TechTreeNames: "Tools,Weapons"						# ADDED
   Armor: 800, type: int, display: true		# reduced
 }
 
 { Item Id: 2653, Name: ArmorHeavyEpic, Ref: ArmorHeavy
-  UnlockCost: 15, display: true					# ADDED
-  UnlockLevel: 25, display: true				# 1 (ADDED display:)
-  TechTreeParent: ArmorHeavy					# ADDED
-  TechTreeNames: "Tools,Weapons"						# Hidden
+  UnlockCost: 13, display: true					# ADDED
+  UnlockLevel: 20, display: true				# 1 (ADDED display:)
+  TechTreeParent: PistolEpic					# ADDED
   NrSlots: 5, type: int, display: true		# ADDED
   Heat: 800, type: int, display: true
   Cold: 273, type: int, display: true
   Radiation: 40, type: int, display: true
   Armor: 1200, type: int, display: true		# increased again
+  TechTreeNames: "alienweapons"
 }
 
 { Template Name: ArmorMedium
@@ -297,10 +297,10 @@ VERSION: 9
   }
   {
   }
+  TechTreeParent: ArmorHeavyEpic					# ADDED
   UnlockCost: 15
-  UnlockLevel: 25
-  TechTreeParent: AssaultRifle
-  TechTreeNames: Weapons
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 
 
@@ -338,10 +338,10 @@ VERSION: 9
     DamageMultiplier_3: 0, data: dirt|stone|rock|hullarmored|hullcombat
     DamageMultiplier_4: 0.2, data: shield
   }
+  TechTreeParent: ArmorHeavyEpic					# ADDED
   UnlockCost: 15
-  UnlockLevel: 25
-  TechTreeParent: Minigun
-  TechTreeNames: Weapons
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 
 { Template Name: Shotgun2Epic
@@ -380,10 +380,10 @@ VERSION: 9
   }
   {
   }
+  TechTreeParent: PistolEpic					# ADDED
   UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: Shotgun2
-  TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 
 # "Plasma Cannon (Epic)" in the tech tree view
@@ -412,8 +412,8 @@ VERSION: 9
   }
   UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: ScifiCannon
-  TechTreeNames: Weapons
+  TechTreeParent: MinigunEpic					# ADDED
+  TechTreeNames: "alienweapons"
 }
 # "EM Pulse Rifle (Epic)" in the tech tree view
 { Template Name: PulseRifleEpic
@@ -450,10 +450,10 @@ VERSION: 9
   }
   {
   }
+  TechTreeParent: MinigunEpic					# ADDED
   UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: PulseRifleT2
-  TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 
 #
@@ -485,10 +485,10 @@ VERSION: 9
   }
   {
   }
+  TechTreeParent: AssaultRifleEpic					# ADDED
   UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: RocketLauncherT2
-  TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 # "Plasma Rifle (Epic)" in the tech tree view
 { Template Name: LaserRifleEpic
@@ -523,10 +523,10 @@ VERSION: 9
   }
   {
   }
+  TechTreeParent: MinigunEpic					# ADDED
   UnlockCost: 15
-  UnlockLevel: 25
-  TechTreeParent: LaserRifle
-  TechTreeNames: Weapons
+  UnlockLevel: 20
+  TechTreeNames: "alienweapons"
 }
 
 { Template Name: PistolEpic
@@ -562,8 +562,7 @@ VERSION: 9
   }
   UnlockCost: 15
   UnlockLevel: 15
-  TechTreeParent: PistolT2
-  TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 
 ## epic drill
@@ -593,9 +592,8 @@ VERSION: 9
     Range: 6, display: false
   }
   UnlockCost: 15
-  UnlockLevel: 25    # changed
-  TechTreeParent: DrillT2
-  TechTreeNames: Tools
+  UnlockLevel: 20    # changed
+  TechTreeNames: "alienweapons"
 }
 # T2 shield gen was missing from constructors
 { Template Name: ShieldGeneratorCVT2
