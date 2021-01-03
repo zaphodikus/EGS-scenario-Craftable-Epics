@@ -1,0 +1,281 @@
+# How it works:
+# - rename to 'Config.ecf' to activate
+# - change original values of parameters as desired
+# - listed parameters will overwrite the game's internal original values
+# - parameters not listed (commented out / removed) will cause the game to continue using the internal ORIGINAL values
+
+
+{ Item Id: 2353, Name: Fiber, Ref: ComponentsTemplate
+  Category: Components
+  StackSize: 4000
+  Mass: 0.2, type: float, display: true, formatter: Kilogram
+  Volume: 0.1, type: float, display: true, formatter: Liter
+}
+
+{ Item Id: 2071, Name: Chainsaw
+  PickupToToolbar: true
+  StackSize: 1
+  Category: Weapons/Items
+  Mass: 6, type: float, display: true, formatter: Kilogram
+  Durability: 500, display: false
+  DegradationProb: 0.0625, type: float, display: false
+  {
+    AllowRemote: false
+    HarvestSupport: false
+    ROF: 0.25, type: float
+    Range: 2, display: false
+    NoiseStrength: 60, display: false
+    CameraShake: 0
+    IgnoreAtmo: true
+    Automatic: true
+    Damage: 65, display: true
+    AmmoCapacity: 125, display: true
+    AmmoType: BioFuel, display: true
+    ReloadDelay: 3.8, display: true
+    DamageMultiplier_1: 0.04, data: wood|plants
+    DamageMultiplier_2: 0, data: concrete|hull|hullarmored|hullcombat|metal|metalhard
+    DamageMultiplier_3: 0, data: dirt|stone|rock
+    DamageMultiplier_4: 5, data: head, display: DmgMultiplierHead
+  }
+  UnlockCost: 0, display: true
+  UnlockLevel: 1, display: true
+  TechTreeNames: Tools
+}
+
+
+# armor https://steamcommunity.com/app/383120/discussions/0/1747895465439059678/?ctp=2
+{ Item Id: 2649, Name: ArmorMedium
+  UnlockCost: 10, display: true					# ADDED
+  UnlockLevel: 10, display: true				# ADDED
+  TechTreeParent: ArmorLight					# ADDED
+  TechTreeNames: "Tools,Weapons"						# ADDED
+}
+{ Item Id: 2650, Name: ArmorHeavy
+  UnlockCost: 10, display: true					# ADDED
+  UnlockLevel: 15, display: true				# ADDED
+  TechTreeParent: ArmorMedium					# ADDED
+  TechTreeNames: "Tools,Weapons"						# ADDED
+  Armor: 800, type: int, display: true		# reduced
+}
+
+{ Item Id: 2653, Name: ArmorHeavyEpic, Ref: ArmorHeavy
+  UnlockCost: 13, display: true					# ADDED
+  UnlockLevel: 20, display: true				# 1 (ADDED display:)
+  TechTreeParent: PistolEpic					# ADDED
+  NrSlots: 5, type: int, display: true		# ADDED
+  Heat: 800, type: int, display: true
+  Cold: 273, type: int, display: true
+  Radiation: 40, type: int, display: true
+  Armor: 1200, type: int, display: true		# increased again
+  TechTreeNames: "alienweapons"
+}
+
+
+{ Item Id: 2673, Name: InsulationBoost, Ref: ArmorBoostTemplate
+  Cold: 100, type: int, display: true  # tripled
+}
+
+{ Item Id: 2072, Name: AssaultRifleEpic, Ref: AssaultRifle
+  PickupToToolbar: true
+  Durability: 500, display: false
+  DegradationProb: 0.039, type: float, display: false
+  {
+    ROF: 0.170, type: float, display: true, formatter: ROF
+    Range: 198, display: false
+    NoiseStrength: 100, display: false
+    BulletSpread: 0.06, display: true
+    Recoil: 0.288, display: true
+    Damage: 110, display: true
+    AmmoCapacity: 45, display: true
+    ReloadDelay: 3, display: true
+    DamageMultiplier_1: 4.5, data: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, data: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0, data: shield
+  }
+  {
+  }
+  TechTreeParent: ArmorHeavyEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
+}
+
+
+{ Item Id: 2075, Name: Shotgun2Epic, Ref: Shotgun2
+  PickupToToolbar: true
+  Durability: 500, display: false
+  DegradationProb: 0.305, type: float, display: false
+  {
+    ROF: 0.850, type: float, display: true, formatter: ROF
+    Automatic: true, display: true
+    Range: 79, display: false
+    NoiseStrength: 100, display: false
+    BulletSpread: 0
+    RaySpread: 0.375, display: true
+    Recoil: 1.008, display: true
+    Damage: 150, display: true
+    AmmoCapacity: 11, display: true
+    ReloadDelay: 3, display: true
+    DamageMultiplier_1: 3, data: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0.015, data: wood
+    DamageMultiplier_3: 0, data: dirt|stone|rock|hullarmored|hullcombat
+    DamageMultiplier_4: 0.4, data: metal
+    DamageMultiplier_5: 0.05, data: metalhard
+    DamageMultiplier_6: 0, data: shield
+  }
+  {
+  }
+  TechTreeParent: PistolEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
+}
+
+# "Plasma Cannon (Epic)" in the tech tree view
+{ Item Id: 2077, Name: ScifiCannonEpic, Ref: ScifiCannon
+  PickupToToolbar: true
+  Durability: 700, display: false
+  DegradationProb: 0.488, type: float, display: false
+  {
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Automatic: true, display: true
+    AmmoCapacity: 3, display: true
+    Recoil: 1.44, display: true
+    ReloadDelay: 6, display: true
+  }
+  UnlockCost: 15
+  UnlockLevel: 25
+  TechTreeParent: MinigunEpic					# ADDED
+  TechTreeNames: "alienweapons"
+}
+# "EM Pulse Rifle (Epic)" in the tech tree view
+{ Item Id: 2086, Name: PulseRifleEpic, Ref: PulseRifleT2
+  PickupToToolbar: true
+  Durability: 500, display: false
+  DegradationProb: 0.061, type: float, display: false
+  {
+    ROF: 0.1, type: float, display: true, formatter: ROF
+    ReloadDelay: 3, display: true
+    Range: 224, display: false
+    BulletSpread: 0.038, display: true
+    Recoil: 0.192, display: true
+    Automatic: true, display: true
+    Damage: 130, display: true
+    AmmoCapacity: 56, display: true
+    AmmoType: PulseLaserChargeRifle, display: true
+    Tracer: Weapons/Projectiles/TracerLaserShotGreen
+    TracerPerBullet: 2
+    DamageMultiplier_1: 4, data: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, data: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0.1, data: shield
+  }
+  {
+  }
+  TechTreeParent: Shotgun2Epic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 25
+  TechTreeNames: "alienweapons"
+}
+
+#
+{ Item Id: 2082, Name: RocketLauncherEpic, Ref: RocketLauncherT2
+  PickupToToolbar: true
+  BlastRadius: 3, display: true
+  BlastDamage: 500, display: true
+  Durability: 500, display: false
+  DegradationProb: 0.488, type: float, display: false
+  {
+    ROF: 0.5, type: float, display: true, formatter: ROF
+    Automatic: true, display: true
+    Recoil: 1.152, display: true
+    ReloadDelay: 6, display: true
+    AmmoCapacity: 3, display: true
+    AmmoType: SlowRocketHoming, display: true
+  }
+  {
+  }
+  TechTreeParent: AssaultRifleEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 25
+  TechTreeNames: "alienweapons"
+}
+# "Plasma Rifle (Epic)" in the tech tree view
+{ Item Id: 2076, Name: LaserRifleEpic, Ref: LaserRifle
+  PickupToToolbar: true
+  Durability: 500, display: false
+  DegradationProb: 0.061, type: float, display: false
+  {
+    Damage: 185, display: true
+    ROF: 0.170, type: float, display: true, formatter: ROF
+    ReloadDelay: 4, display: true
+    Recoil: 0.144, display: true
+    AmmoCapacity: 56, display: true
+    Range: 198, display: false
+    NoiseStrength: 80, display: false
+    Tracer: Weapons/Projectiles/TracerLaserShotBlue
+    TracerPerBullet: 1
+    DamageMultiplier_1: 4.5, data: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, data: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0.2, data: shield
+  }
+  {
+  }
+  TechTreeParent: DrillEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
+}
+
+
+{ Item Id: 2078, Name: PistolEpic, Ref: PistolT2
+  PickupToToolbar: true
+  Durability: 500, display: false
+  DegradationProb: 0.151, type: float, display: false
+  {
+    ROF: 0.170, type: float, display: true, formatter: ROF
+    Automatic: true, display: true
+    Range: 119, display: false
+    BulletSpread: 0.075, display: true
+    Recoil: 0.384, display: true
+    Damage: 63, display: true
+    AmmoCapacity: 22, display: true
+    ReloadDelay: 2.019, display: true
+    DamageMultiplier_1: 4, data: head, display: DmgMultiplierHead
+    DamageMultiplier_2: 0, data: dirt|stone|rock|wood|hullarmored|hullcombat
+    DamageMultiplier_3: 0, data: shield
+  }
+  {
+  }
+  UnlockCost: 15
+  UnlockLevel: 15
+  TechTreeNames: "alienweapons"
+}
+
+## epic drill
+{ Item Id: 2088, Name: DrillEpic, Ref: DrillT2
+  {
+    Damage: 750
+    Range: 9, display: false
+    Radius: 2.5
+  }
+  {
+    Damage: 1500
+    Radius: 3.5
+    Range: 6, display: false
+  }
+  UnlockCost: 15
+  UnlockLevel: 20    # changed
+  TechTreeNames: "alienweapons"
+}
+
+{ Item Id: 42, Name: FlameThrower
+  UnlockCost: 15, display: true
+  UnlockLevel: 10, display: true
+  TechTreeNames: Weapons
+}
+
+{ Item Id: 1559, Name: FlameThrowerT2
+  UnlockCost: 15, display: true
+  UnlockLevel: 20, display: true
+  TechTreeNames: "alienweapons"
+}

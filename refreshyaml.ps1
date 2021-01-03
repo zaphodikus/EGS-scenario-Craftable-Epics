@@ -1,15 +1,18 @@
-#1: Copy your custom .ecf config files into the Content/Configuration folder of this scenario. You only need to copy files you actually changed, missing files will pull from default.
-#
-# this folder
+# A helper script which coppies the default scenario playfiled files over the top of your scenario
+# , then finally copies all the files into this folder to allow a checkin into git.
+
+# To use this script for a scenario please configure the variables
 $scenario_name = "Craftable Epics"
 $scenario_id = "$( $scenario_name )__2337746040"
-$local_root   = join-path $pwd $scenario_name
 $base_scenario = "Default Random"
+
+# the target work folder
+$local_root   = join-path $pwd $scenario_name
 
 # game folders
 $content_root = "C:\SteamLibrary\steamapps\common\Empyrion - Galactic Survival\Content"
 $scenario_root = join-path (join-path $content_root "Scenarios") $scenario_id
-# based of of "Default Random"
+# based off of "Default Random"
 $content_base_scenario = join-path (join-path $content_root "Scenarios") $base_scenario
 
 $randompresets_root = join-path $content_root "RandomPresets"
@@ -39,3 +42,4 @@ write-host "Copy from '$scenario_root'"
 write-host "Copy to '$local_root'"
 New-Item -ItemType Directory -Path $local_root -Force -ea 0 | Out-Null	# Ensure target folder exists 1st time
 Copy-Item -Path $scenario_root\* -Destination $local_root -Recurse -Force # overwrite all
+git status
