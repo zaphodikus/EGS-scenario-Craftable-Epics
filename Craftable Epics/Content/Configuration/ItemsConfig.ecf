@@ -1634,15 +1634,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
   
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # # need to set these because we extend a tech tree item
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 7, display: true
-  # TechTreeParent: AssaultRifleT2
-  # TechTreeNames: Weapons
+  TechTreeParent: ArmorHeavyEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 25, Name: Sniper2Epic, Ref: Sniper2
   Meshfile: Entities/Items/Weapons/Snipers/ScifiSniper3EpicPrefab
@@ -1725,14 +1720,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     DamageMultiplier_4: 0.4, param1: shield
   }
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 20, display: true
-  # TechTreeParent: Minigun
-  # TechTreeNames: Weapons
+TechTreeParent: ArmorHeavyEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 27, Name: Shotgun2Epic, Ref: Shotgun2
   Meshfile: Entities/Items/Weapons/Shotguns/ScifiShotgun2EpicPrefab
@@ -1772,14 +1763,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 20, display: true
-  # TechTreeParent: Shotgun2
-  # TechTreeNames: Weapons
+  TechTreeParent: PistolEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 28, Name: LaserRifleEpic, Ref: LaserRifle
   Meshfile: Entities/Items/Weapons/Rifles/ScifiRifle4EpicPrefab
@@ -1822,14 +1809,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 25, display: true
-  # TechTreeParent: LaserRifle
-  # TechTreeNames: Weapons
+  TechTreeParent: DrillEpic					# ADDED
+  UnlockCost: 15
+  UnlockLevel: 22
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 29, Name: ScifiCannonEpic, Ref: ScifiCannon
   Meshfile: Entities/Items/Weapons/ScifiCannon/ScifiCannonEpicPrefab
@@ -1849,14 +1832,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     ReloadDelay: 6, display: true
   }
 
-  UnlockCost: 0
+  UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 25, display: true
-  # TechTreeParent: ScifiCannon
-  # TechTreeNames: Weapons
+  TechTreeParent: MinigunEpic					# ADDED
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 30, Name: PistolEpic, Ref: Pistol
   Meshfile: Entities/Items/Weapons/Pistols/SciFiPistol4EpicPrefab
@@ -1892,14 +1871,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
 
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 12, display: true
-  # TechTreeParent: PistolT2
-  # TechTreeNames: Weapons
+  UnlockCost: 15
+  UnlockLevel: 15
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 31, Name: MultiToolT2, Ref: MultiTool
   Meshfile: Entities/Items/Weapons/MultiToolT2Prefab
@@ -2040,14 +2014,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
   
-  UnlockCost: 0
+  TechTreeParent: AssaultRifleEpic					# ADDED
+  UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 20, display: true
-  # TechTreeParent: RocketLauncherT2
-  # TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 35, Name: LaserPistolT2, Ref: LaserPistol
   Meshfile: Entities/Items/Weapons/Pistols/ScifiEnergyPistol3Prefab
@@ -2200,15 +2170,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     RedDot: true
   }
   
-  UnlockCost: 0
+  TechTreeParent: Shotgun2Epic					# ADDED
+  UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
-  # # need to set these because we extend a tech tree item
-  # UnlockCost: 0, display: true
-  # UnlockLevel: 20, display: true
-  # TechTreeParent: PulseRifleT2
-  # TechTreeNames: Weapons
+  TechTreeNames: "alienweapons"
 }
 { +Item Id: 39, Name: SurvivalTool 
   Meshfile: Entities/Items/Weapons/SurvivalToolPrefab
@@ -2384,10 +2349,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
     Range: 6, display: false
   }
   
-  UnlockCost: 0
-  UnlockLevel: 25
-  TechTreeParent: ""
-  TechTreeNames: Hidden
+  UnlockCost: 15
+  UnlockLevel: 20    # changed
+  TechTreeNames: "alienweapons"
 }
 
 
@@ -2472,9 +2436,9 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
    
   }
 
-  UnlockCost: 0
-  UnlockLevel: 0
-  TechTreeNames: Hidden
+  UnlockCost: 15, display: true
+  UnlockLevel: 10, display: true
+  TechTreeNames: Weapons
 }
 
 { Item Id: 43, Name: PlasmaCannonAlien
@@ -10244,7 +10208,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   Durability: 800, display: true
   DegradationFac: 0.08, type: float, display: false    # do not display anymore 
   Oxygen: 725, type: int, display: true
-  Armor: 200, type: int, display: true
+  Armor: 400, type: int, display: true  # was 200
   Heat: 30, type: int, display: true
   Cold: 30, type: int, display: true
   Radiation: 6, type: int, display: true
@@ -10277,7 +10241,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   MarketPrice: 75000, display: true
   Durability: 1500, display: true
   Oxygen: 860, type: int, display: true
-  Armor: 300, type: int, display: true
+  Armor: 600, type: int, display: true # was 300
   Heat: 40, type: int, display: true
   Cold: 55, type: int, display: true
   Radiation: 12, type: int, display: true
@@ -10300,10 +10264,10 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   
   Durability: 1000, display: true
   Oxygen: 1000, type: int, display: true
-  Armor: 500, type: int, display: true
-  Heat: 150, type: int, display: true
+  Armor: 1000, type: int, display: true  # was 500
+  Heat: 3000, type: int, display: true # was 150
   Cold: 250, type: int, display: true
-  Radiation: 15, type: int, display: true
+  Radiation: 30, type: int, display: true # was 15
   FallDamageFac: 0.7, type: float, display: true
   PowerFac: 0.7, type: float, display: true  # better: 0.085
   SpeedFac: 0.9, type: float, display: true  # better: 0.085
@@ -10311,15 +10275,15 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
   JetpackFac: 1.1, type: float, display: true
   FoodFac: 0.9, type: float, display: true
   StaminaFac: 1.1, type: float, display: true
-  NrSlots: 0, type: int, display: true
+  NrSlots: 5, type: int, display: true  # was 0
   
   Mass: 100, type: float, display: false, formatter: Kilogram
   Volume: 60, type: float, display: true, formatter: Liter
   
-  UnlockLevel: 1
-  TechTreeParent: # set null in case a custom Config.ecf puts referenced ArmorHeavy in TechTree
-  TechTreeNames: Hidden
-  # ShowUser: No
+  UnlockCost: 13, display: true					# ADDED
+  UnlockLevel: 20, display: true				# 1 (ADDED display:)
+  TechTreeParent: PistolEpic					# ADDED
+  TechTreeNames: "alienweapons"
 }
 
 /* CATEGORIE: ARMOR BOOSTS id 620 - 699 */
@@ -10394,7 +10358,7 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 { +Item Id: 625, Name: InsulationBoost, Ref: ArmorBoostTemplate
   Heat: 50, type: int, display: true
-  Cold: 25, type: int, display: true
+  Cold: 50, type: int, display: true #was 25
   
   Volume: 2.5, type: float, display: true, formatter: Liter
   Mass: 3.5, type: float, display: true, formatter: Kilogram
@@ -11028,3 +10992,49 @@ BlastDamage: "50"   => damage for objects within the radius around the explosion
 }
 
 # =============================================================================
+# Flamethrower T2
+{ +Item Id: 1559, Name: FlameThrowerT2
+  Meshfile: Entities/Items/Weapons/Flamethrower/SciFiFlamethrowerPrefab
+  PickupToToolbar: true
+  CustomIcon: FlameThrower
+  Material: metalweapon
+  MarketPrice: 13192, display: true
+  HoldType: 15
+  StackSize: 1
+  # CustomIcon: Fillertool
+  Category: Weapons/Items
+  Mass: 36, type: float, display: false, formatter: Kilogram
+  Volume: 44, type: float, display: true, formatter: Liter
+  #Info: bkiFlameThrowerT2, display: true
+  Info: An upgraded flamethrower designed to reach further and burn hotter but requires specialized fuel that is corrosive to the firing mechanism., display: true
+  Durability: 500, display: false
+  DegradationProb: 0.5, type: float, display: false
+  SfxJammed: Weapons/Player/Reload/WeaponJammedAutoFire 
+  
+  ShowUser: Yes
+  
+  { Child 0
+    Class: LauncherSS
+    ROF: 0.2, type: float
+    Range: 14, display: false
+    Recoil: 0.2, display: false
+    NoiseStrength: 40, display: false 
+    CameraShake: 0 
+    IgnoreAtmo: true
+    Automatic: true
+    AmmoCapacity: 75, display: true
+    AmmoType: FlameThrowerCanister, display: true
+    UseSingleMagazine: true
+    ReloadDelay: 5.9, display: true
+    PfxMuzzle: flamethrower_v1
+    SfxBegin: Weapons/Player/FlameThrower/Flamethrower_Start
+	SfxLoop: Weapons/Player/FlameThrower/Flamerthrower_Firing
+    SfxStop: Weapons/Player/Drill/Mute
+    SfxReload: Weapons/Player/FlameThrower/Flamethrower_Reload
+  }
+
+  UnlockCost: 15, display: true
+  UnlockLevel: 20, display: true
+  TechTreeParent: ""
+  TechTreeNames: "alienweapons"
+}

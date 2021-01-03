@@ -17,6 +17,178 @@
 
 ## Adding T1 devices as Input to T2 devices only works for single devices (eg Constructor T1/T2) - does not work for block groups (eg Cockpits T1/T2). For latter do not use T1 as Input 
 
+# uses 4x the material for a base ore and almost 3x longer to make
+{ Template Name: MagnesiumOre, Ref: OreTemplate
+  BaseItem: true
+  CraftTime: 12
+  Target: "AdvC"  # Adv only
+  { Child Inputs
+    CrushedStone: 100
+	CobaltOre: 5
+	BioFuel: 5
+  }
+  UnlockCost: 0
+  UnlockLevel: 10
+  Category: Components
+}
+
+# uses 4x the material for a base ore and almost 3x longer to make
+{ Template Name: CobaltOre, Ref: OreTemplate
+  BaseItem: true
+  CraftTime: 12
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    CrushedStone: 100
+	BioFuel: 5
+  }
+  UnlockCost: 0
+  UnlockLevel: 10
+  Category: Components
+}
+
+{ Template Name: ArmorMedium
+  CraftTime: 90
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 40
+    SteelPlateArmored: 4
+    Motor: 2
+    Electronics: 5
+    GlassPlate: 4
+    CapacitorComponent: 1
+    EnergyMatrix: 1
+    MechanicalComponents: 6
+    OpticalFiber: 1
+  }
+}
+{ Template Name: ArmorHeavy
+  CraftTime: 120
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    SteelPlateArmored: 12
+    GlassPlate: 8
+    Motor: 6
+    Electronics: 6
+    CapacitorComponent: 4
+    EnergyMatrix: 4
+    Nanotubes: 9
+    PlasticMaterial: 10
+    Computer: 2
+    ZascosiumAlloy: 4
+    ErestrumGel: 4
+  }
+}
+{ Template Name: ArmorHeavyEpic
+  CraftTime: 400
+  Target: "AdvC"
+  { Child Inputs
+	ArmorHeavy: 1
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    ErestrumGel: 10
+    GlassPlate: 20
+    EnergyMatrix: 8
+    Motor: 6
+    Electronics: 20
+    CapacitorComponent: 20
+    Nanotubes: 20
+    PlasticMaterial: 30
+    Computer: 4
+    GoldIngot: 10
+  }
+}
+
+# EVA booster recipes
+{ Template Name: JetpackBoost
+  CraftTime: 100
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 2
+    Electronics: 10
+    CobaltAlloy: 10
+    Motor: 2
+    GoldIngot: 3
+  }
+}
+
+{ Template Name: ArmorBoost
+  CraftTime: 100
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 10
+    Electronics: 5
+    Motor: 4
+    GoldIngot: 3
+  }
+}
+{ Template Name: MultiBoost
+  CraftTime: 100
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 3
+    Electronics: 5
+    Nanotubes: 30
+    GoldIngot: 3
+  }
+}
+
+{ Template Name: OxygenBoost
+  CraftTime: 100
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 6
+    Electronics: 2
+    Nanotubes: 10
+    GoldIngot: 3
+  }
+}
+{ Template Name: InsulationBoost
+  CraftTime: 100
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 3
+    Electronics: 5
+    Nanotubes: 30
+    GoldIngot: 3
+  }
+}
+{ Template Name: RadiationBoost
+  CraftTime: 100
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 5
+    OpticalFiber: 10
+    Nanotubes: 20
+    GoldIngot: 3
+  }
+}
+{ Template Name: MobilityBoost
+  CraftTime: 100
+  Target: "AdvC"
+  { Child Inputs
+    SteelPlate: 5
+    Electronics: 5
+    PlasticMaterial: 10
+    Motor: 4
+    GoldIngot: 3
+  }
+}
+
+# ===============
+#   Booster
+# ===============
+
+{ +Template Name: EVABoost
+  CraftTime: 100  
+  Target: "HoverC,BaseC,SmallC,LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 1
+    OpticalFiber: 1 
+    Nanotubes: 2
+    GoldIngot: 1
+  }
+}
+
  # =======================
  #  Reprocessed Ores  
  # =======================
@@ -266,7 +438,7 @@
 
 { +Template Name: Fiber
   BaseItem: true #A1
-  OutputCount: 30
+  OutputCount: 60 # was 30
   CraftTime: 5
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -319,7 +491,7 @@
 }
 
 { +Template Name: MagnesiumPowder
-  OutputCount: 10 #D1
+  OutputCount: 20 # was 10
   CraftTime: 5
   Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
@@ -3112,20 +3284,6 @@
     MultiTool: 1
   }
 }
-# ===============
-#   Booster
-# ===============
-
-{ +Template Name: EVABoost
-  CraftTime: 100  
-  Target: "HoverC,BaseC,SmallC,LargeC,AdvC"
-  { Child Inputs
-    SteelPlate: 1
-    OpticalFiber: 1 
-    Nanotubes: 2
-    GoldIngot: 1
-  }
-}
 
 # ===============
 #   Weapons T1
@@ -3138,16 +3296,6 @@
     MechanicalComponents: 5
   }
 }
-
-# { +Template Name: PistolEpic
-  # CraftTime: 20 #A1 1
-  # Target: "AdvC"
-  # { Child Inputs
-    # SteelPlate: 1
-    # PistolKit: 1
-    # PistolT2: 1
-  # }
-# }
 
 { +Template Name: PistolT2
   CraftTime: 20 #A2 1
@@ -3177,16 +3325,46 @@
     AssaultRifle: 1
   }
 }
-# { +Template Name: AssaultRifleEpic
-  # CraftTime: 30 #B1
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # CobaltAlloy: 5
-    # RifleKit: 1
-    # AssaultRifleT2: 1
-  # }
-# }
+
+{ +Template Name: AssaultRifleEpic
+  CraftTime: 30
+  Target: "AdvC"
+  { Child Inputs
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    GoldIngot: 10
+    AssaultRifleT2: 1
+  }
+}
+
+{ +Template Name: FlameThrower
+  CraftTime: 30
+  Target: "BaseC,LargeC,AdvC"
+  { Child Inputs
+    MechanicalComponents: 18
+	TitanPlates: 3
+    Electronics: 6
+    CobaltAlloy: 30
+	Nanotubes: 10
+  }
+}
+
+
+# Craftable Epics this is in the the Epics tech tree
+{ +Template Name: FlameThrowerT2
+  CraftTime: 30
+  DeconOverride: Stop
+  Target: "AdvC"
+  { Child Inputs
+    FlameThrower: 1
+	OxygenBoost: 1
+    AssaultRifle: 1
+	GoldIngot: 3
+	AluminiumCoil: 25
+  }
+}
+
 
 { +Template Name: Shotgun
   CraftTime: 30 #A2 3
@@ -3216,15 +3394,20 @@
     # HeavyWeaponKit: 1
   }
 }
-# { +Template Name: RocketLauncherEpic
-  # CraftTime: 30 #C2 15
-  # Target: "AdvC"
-  # { Child Inputs
-    # SteelPlateArmored: 1
-    # HeavyWeaponKit: 1
-    # RocketLauncherT2: 1
-  # }
-# }
+
+
+{ Template Name: RocketLauncherEpic
+  CraftTime: 400
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    RocketLauncher: 1
+  }
+}
 
 { +Template Name: RocketLauncherT2
   CraftTime: 30 #C2 15 uses "SlowRocketHoming"
@@ -3283,16 +3466,18 @@
     ShotgunKit: 1
   }
 }
-# { +Template Name: Shotgun2Epic
-  # CraftTime: 30 #C2 3 20
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # SteelPlateArmored: 1
-    # ShotgunKit: 1
-    # Shotgun2: 1
-  # }
-# }
+{ Template Name: Shotgun2Epic
+  CraftTime: 300
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    Shotgun2: 1
+  }
+}
 
 { +Template Name: Minigun
   CraftTime: 30 #B1 15
@@ -3304,16 +3489,19 @@
     HeavyWeaponKit: 1
   }
 }
-# { +Template Name: MinigunEpic
-  # CraftTime: 30 #B1 15
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # CobaltAlloy: 5
-    # HeavyWeaponKit: 1
-    # Minigun: 1
-  # }
-# }
+# Lazer Minigun (Epic) in the tree
+{ Template Name: MinigunEpic
+  CraftTime: 300
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    Minigun: 1
+  }
+}
 
 { +Template Name: Sniper2
   CraftTime: 30 #C1 15
@@ -3325,16 +3513,32 @@
     SniperKit: 1
   }
 }
-# { +Template Name: Sniper2Epic
-  # CraftTime: 30 #C1 15
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # SteelPlateArmored: 1
-    # SniperKit: 1
-    # Sniper2: 1
-  # }
-# }
+# "Plasma Cannon (Epic)" in the tech tree view
+{ Template Name: ScifiCannonEpic
+  CraftTime: 480
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    ScifiCannon: 1
+  }
+}
+# "EM Pulse Rifle (Epic)" in the tech tree view
+{ Template Name: PulseRifleEpic
+  CraftTime: 400
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    PulseRifleT2: 1
+  }
+}
 
 { +Template Name: PulseRifle #"Pulse Rifle"
   CraftTime: 30 #C2 10 uses "5.8mmBullet"
@@ -3346,7 +3550,32 @@
     FluxCoil: 2
   }
 }
+# "Plasma Rifle (Epic)" in the tech tree view
+{ Template Name: LaserRifleEpic
+  CraftTime: 300
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    LaserRifle: 1
+  }
+}
 
+{ Template Name: PistolEpic
+  CraftTime: 200
+  Target: "AdvC"
+  { Child Inputs
+    PistolT2: 1
+    MechanicalComponents: 10
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    PlasticMaterial: 30
+    GoldIngot: 10
+  }
+}
 { +Template Name: PulseRifleT2 #"Pulse Rifle (T2)"
   CraftTime: 30 #C2 15 uses "5.8mmBullet"
   Target: "LargeC,AdvC"
@@ -3358,16 +3587,6 @@
   }
 }
 
-# { +Template Name: PulseRifleEpic
-  # CraftTime: 30 #C2
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # SteelPlateArmored: 1
-    # RifleKit: 1
-    # PulseRifleT2: 1
-  # }
-# }
 
 { +Template Name: LaserRifle
   CraftTime: 30 #D1 25
@@ -3381,16 +3600,6 @@
   }
 }
 
-# { +Template Name: LaserRifleEpic
-  # CraftTime: 30 #C2 25
-  # Target: "AdvC"
-  # #Target: ""
-  # { Child Inputs
-    # ZascosiumAlloy: 1
-    # LaserKit: 1
-    # LaserRifle: 1
-  # }
-# }
 
 { +Template Name: ScifiCannon
   CraftTime: 30 #D1 25 Plasma Cannon
@@ -3404,16 +3613,49 @@
   }
 }
 
-# { +Template Name: ScifiCannonEpic
-  # CraftTime: 30 #D1 25 Plasma Cannon
-  # Target: AdvC
-  # #Target: ""
-  # { Child Inputs
-    # SteelPlate: 1
-    # HeavyWeaponKit: 1
-    # ScifiCannon: 1
-  # }
-# }
+
+
+## epic drill
+{ Template Name: DrillEpic
+  CraftTime: 200
+  Target: "AdvC"
+  { Child Inputs
+    DrillT2: 1
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 6
+    CapacitorComponent: 20
+    Nanotubes: 20
+    PlasticMaterial: 30
+    GoldIngot: 10
+  }
+}
+
+# T2 shield gen was missing from constructors
+{ Template Name: ShieldGeneratorCVT2
+  CraftTime: 90
+  Target: "AdvC"
+  { Child Inputs
+    ShieldGeneratorCV: 1
+    GoldIngot: 10
+    Oscillator: 2
+    CapacitorComponent: 5
+    FluxCoil: 5
+    PowerCoil: 1
+  }
+}
+{ Template Name: ShieldGeneratorBAT2
+  CraftTime: 90
+  Target: "AdvC"
+  { Child Inputs
+    ShieldGeneratorBA: 1
+    GoldIngot: 10
+    Oscillator: 2
+    CapacitorComponent: 5
+    FluxCoil: 5
+    PowerCoil: 1
+  }
+}
 
 /* Tools for vessels */
 
@@ -3799,10 +4041,10 @@
 
 { +Template Name: BioFuel
   OutputCount: 1 #A1 
-  CraftTime: 28
+  CraftTime: 25  # was 28
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    Fiber: 10
+    Fiber: 7   # was 10
   }
 }
 #{ +Template Name: FlameThrowerCanister
