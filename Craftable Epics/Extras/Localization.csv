@@ -1,6 +1,6 @@
 KEY,English
-CE_lpsUseSpotlights,Example loader screen #00
-CE_lpsBeWellPrepared,Example loader screen #01
-CE_lpsFindGoodSpot,Example loader screen #02
-CE_lpsNumber4,Example loader screen #03
+CE_lpsScreen0,Collect rare elements and craft epic Weapons and armours
+CE_lpsScreen1,Fit out your armour with all-craftable boosters
+CE_lpsScreen2,Welcome to Craftable Epics
+CE_lpsScreen3,"Shoutout to Xango2000, VulcanTourist, RuneShadow, Khazul"
 ttwalienweapons,Epic Items

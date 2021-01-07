@@ -1,3 +1,4 @@
-CE_lpsUseSpotlights
-CE_lpsBeWellPrepared
-CE_lpsFindGoodSpot
+CE_lpsScreen0
+CE_lpsScreen1
+CE_lpsScreen2
+CE_lpsScreen3
