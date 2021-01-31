@@ -518,6 +518,9 @@ VERSION: 9
     Motor: 2
     LaserRifle: 1
   }
+  UnlockCost: 15
+  UnlockLevel: 25
+  TechTreeNames: "alienweapons"
 }
 { Item Id: 2076, Name: LaserRifleEpic, Ref: LaserRifle
   PickupToToolbar: true
@@ -639,4 +642,101 @@ VERSION: 9
     FluxCoil: 5
     PowerCoil: 1
   }
+}
+
+## start kit
+{ +LootGroup Name: EscapePodEasy
+  Count: all
+  Item_0: EmergencyRations, param1: 2
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param1: 1
+  Item_4: OreScanner, param1:1
+  Item_5: Sniper, param1:1
+  Item_6: Shotgun, param1:1
+  Item_7: 12.7mmBullet, param1:20
+  Item_8: ShotgunShells, param1:20
+  Item_9: Chainsaw, param1:1
+  Item_10: BioFuel, param1:15
+  Item_11: AssaultRifle, param1:1
+  Item_12: 5.8mmBullet, param1:50
+  Item_13: Bandages, param1:5
+  Item_14: IronIngot, param1:"50,100"
+  Item_15: CopperIngot, param1:"100,200"
+  Item_16: SiliconIngot, param1:"100,200"
+  Item_17: CobaltIngot, param1:"5,10"
+  Item_18: PromethiumPellets, param1:"20,30"
+  Item_19: PlasticMaterial, param1:"20,30"
+  Item_20: EnergyCell, param1:"5,10"
+  Item_21: MagnesiumOre, param1:"20,30"
+  Item_22: MechanicalComponents, param1:"20,30"
+  Item_23: Computer, param1:"3,5"
+  Item_24: OpticalFiber, param1:"5,10"
+  Item_25: Electronics, param1:"5,10"
+  Item_26: Nanotubes, param1:"5,10"
+  Item_27: SteelPlate, param1:"20,30"
+}
+
+{ +LootGroup Name: EscapePodMedium
+  Count: 22 # up to Magnesium
+  Item_0: EmergencyRations, param1: 2
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param1: 1
+  Item_4: OreScanner, param1:1
+  Item_5: Sniper, param1:1
+  Item_6: Shotgun, param1:1
+  Item_7: 12.7mmBullet, param1:20
+  Item_8: ShotgunShells, param1:20
+  Item_9: Chainsaw, param1:1
+  Item_10: BioFuel, param1:15
+  Item_11: AssaultRifle, param1:1
+  Item_12: 5.8mmBullet, param1:50
+  Item_13: Bandages, param1:5
+  Item_14: IronIngot, param1:"50,100"
+  Item_15: CopperIngot, param1:"100,200"
+  Item_16: SiliconIngot, param1:"100,200"
+  Item_17: CobaltIngot, param1:"5,10"
+  Item_18: PromethiumPellets, param1:"20,30"
+  Item_19: PlasticMaterial, param1:"20,30"
+  Item_20: EnergyCell, param1:"5,10"
+  Item_21: MagnesiumOre, param1:"20,30"
+  Item_22: MechanicalComponents, param1:"20,30"
+  Item_23: Computer, param1:"3,5"
+  Item_24: OpticalFiber, param1:"5,10"
+  Item_25: Electronics, param1:"5,10"
+  Item_26: Nanotubes, param1:"5,10"
+  Item_27: SteelPlate, param1:"20,30"
+}
+
+{ +LootGroup Name: EscapePodHard
+  Count: 16  # up to ingots
+  Item_0: EmergencyRations, param1: 2
+  Item_1: WaterBottle, param1: 5
+  Item_2: RadarSuitT1, param1: 1
+  Item_3: SurvivalTent, param1: 1
+  Item_4: OreScanner, param1:1
+  Item_5: Sniper, param1:1
+  Item_6: Shotgun, param1:1
+  Item_7: 12.7mmBullet, param1:20
+  Item_8: ShotgunShells, param1:20
+  Item_9: Chainsaw, param1:1
+  Item_10: BioFuel, param1:15
+  Item_11: AssaultRifle, param1:1
+  Item_12: 5.8mmBullet, param1:50
+  Item_13: Bandages, param1:5
+  Item_14: IronIngot, param1:"50,100"
+  Item_15: CopperIngot, param1:"100,200"
+  Item_16: SiliconIngot, param1:"100,200"
+  Item_17: CobaltIngot, param1:"5,10"
+  Item_18: PromethiumPellets, param1:"20,30"
+  Item_19: PlasticMaterial, param1:"20,30"
+  Item_20: EnergyCell, param1:"5,10"
+  Item_21: MagnesiumOre, param1:"20,30"
+  Item_22: MechanicalComponents, param1:"20,30"
+  Item_23: Computer, param1:"3,5"
+  Item_24: OpticalFiber, param1:"5,10"
+  Item_25: Electronics, param1:"5,10"
+  Item_26: Nanotubes, param1:"5,10"
+  Item_27: SteelPlate, param1:"20,30"
 }
