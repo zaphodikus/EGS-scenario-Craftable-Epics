@@ -1,7 +1,8 @@
 KEY,English
-CE_lpsScreen0,"Welcome to Craftable Epics"
+CE_lpsScreen0,"Welcome to Craftable Epics for version 1.4"
 CE_lpsScreen1,"Collect rare elements and craft epic Weapons and armours"
 CE_lpsScreen2,"Fit out your armour with all-craftable boosters"
-CE_lpsScreen3,"Shoutout to Xango2000, VulcanTourist, RuneShadow, Khazul"
-CE_lpsScreen4,"Research a new tech Tree"
+CE_lpsScreen3,"Shoutout to Xango2000, VulcanTourist, RuneShadow, Khazul, Kassonnade"
+CE_lpsScreen4,"Research the new tech Tree"
+CE_lpsScreen5,"Quick starting POD drop is based on difficulty setting"
 ttwalienweapons,Epic Items
