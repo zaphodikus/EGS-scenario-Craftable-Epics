@@ -1,8 +1,10 @@
+# This is Craftable Epics a steam workshop item: by @zaphodikus
+# https://steamcommunity.com/sharedfiles/filedetails/?id=2337746040
 #
 
 VERSION: 9
 
-# uses 4x the material for a base ore and almost 3x longer to make
+# Added: uses 4x the material for a base ore and almost 3x longer to make
 { Template Name: MagnesiumOre, Ref: OreTemplate
   BaseItem: true
   CraftTime: 12
@@ -17,7 +19,7 @@ VERSION: 9
   Category: Components
 }
 
-# uses 4x the material for a base ore and almost 3x longer to make
+# Added uses 4x the material for a base ore and almost 3x longer to make
 { Template Name: CobaltOre, Ref: OreTemplate
   BaseItem: true
   CraftTime: 12
@@ -31,38 +33,96 @@ VERSION: 9
   Category: Components
 }
 
-{ Item Id: 2353, Name: Fiber, Ref: ComponentsTemplate
-  Category: Components
-  StackSize: 4000
-  Mass: 0.2, type: float, display: true, formatter: Kilogram
-  Volume: 0.1, type: float, display: true, formatter: Liter
-}
+# 
+#{ Item Id: 2353, Name: Fiber, Ref: ComponentsTemplate
+#  Category: Components
+#  StackSize: 4000
+#  Mass: 0.2, type: float, display: true, formatter: Kilogram
+#  Volume: 0.1, type: float, display: true, formatter: Liter
+#}
 
-{ Template Name: Fiber
-  BaseItem: true
-  DeconOverride: Continue
-  OutputCount: 60  # doubled
-  CraftTime: 5
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    WoodLogs: 1
-  }
-}
+#{ Template Name: Fiber
+#  BaseItem: true
+#  DeconOverride: Continue
+#  OutputCount: 60  # was 30
+#  CraftTime: 5
+#  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+#  { Child Inputs
+#    WoodLogs: 1
+#  }
+#}
 { Template Name: BioFuel
   OutputCount: 1
-  CraftTime: 25   # reduced slightly
+  CraftTime: 30
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
-    Fiber: 7  # less
+    Fiber: 4  # was 10 
   }
 }
 
 { Template Name: MagnesiumPowder
-  OutputCount: 20
+  OutputCount: 20 # was 10
   CraftTime: 5
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
     MagnesiumOre: 5
+  }
+}
+
+{ +Item Id: 67, Name: FlameThrowerCanister
+  Meshfile: Entities/Misc/DummyPrefab
+  # Meshfile: Entities/Items/Weapons/Projectiles/FlameThrowerProjectilePrefab
+  DropMeshfile: Entities/Misc/BagSmallPrefab
+  #CustomIcon: FlamethrowerCanisterRG
+  Material: metalweapon
+  HoldType: 0
+  Canhold: false
+  Info: Refined Ethanol designed to burn at higher temperatures for use in upgraded Flamethrowers., display: true
+  Category: Weapons/Items
+  StackSize: 2000
+  Mass: 20, type: float, display: true, formatter: Kilogram
+  Volume: 7.5, type: float, display: true, formatter: Liter
+  MarketPrice: 338, display: true
+  { Child 0
+    Class: Projectile
+    Damage: 50, display: false
+    BlastParticleIndex: 13
+    BlastRadius: 3, display: false
+    BlastDamage: 65, display: false
+    Buff: "Fire,DermalBurn"
+    Buff_chance: "1,1"
+    Speed: 30
+    Range: 28
+    RangeSpace: 14
+    BulletsPerShot: 8
+    BulletSpread: 5
+    NoiseStrength: 80, display: false   
+    Ballistic: false
+	
+    DamageMultiplier_1: 1.25, param1: head
+    DamageMultiplier_2: 2, param1: woodblock|plastic
+    DamageMultiplier_3: 0.0001, param1: wood|dirt|stone|rock
+    DamageMultiplier_4: 0, param1: concrete|hull|hullarmored|hullcombat|metal|metalhard
+    DamageMultiplier_5: 0, param1: shield 
+    DamageMultiplier_6: 1, param1: human 
+    BlastDamageMultiplier_1: 1, param1: head
+    BlastDamageMultiplier_2: 2, param1: wood|woodblock|plastic
+    BlastDamageMultiplier_3: 0, param1: dirt|stone|rock|resourcesoft|resourcemedium|resourcehard
+    BlastDamageMultiplier_4: 0, param1: concrete|hull|hullarmored|hullcombat|metal|metalhard
+    BlastDamageMultiplier_5: 0, param1: shield
+  }
+
+  UnlockLevel: 1
+  TechTreeNames: Hidden
+}
+
+{ +Template Name: FlameThrowerCanister
+  OutputCount: 1
+  CraftTime: 20
+  Target: "LargeC,AdvC"
+  { Child Inputs
+    BioFuel: 6
+	HydrogenBottle: 1
   }
 }
 
@@ -83,20 +143,20 @@ VERSION: 9
     CameraShake: 0
     IgnoreAtmo: true
     Automatic: true
-    Damage: 65, display: true
-    AmmoCapacity: 125, display: true
+    Damage: 85, display: true
+    AmmoCapacity: 200, display: true # was 125
     AmmoType: BioFuel, display: true
     ReloadDelay: 3.8, display: true
     DamageMultiplier_1: 0.04, data: wood|plants
     DamageMultiplier_2: 0, data: concrete|hull|hullarmored|hullcombat|metal|metalhard
     DamageMultiplier_3: 0, data: dirt|stone|rock
-    DamageMultiplier_4: 5, data: head, display: DmgMultiplierHead
+    DamageMultiplier_4: 0, param1: shield 
+    DamageMultiplier_5: 1, data: head, display: DmgMultiplierHead # Added
   }
   UnlockCost: 0, display: true
   UnlockLevel: 1, display: true
-  TechTreeNames: Tools
+  TechTreeNames: "Tools,Weapons"
 }
-
 
 # armor https://steamcommunity.com/app/383120/discussions/0/1747895465439059678/?ctp=2
 { Item Id: 2649, Name: ArmorMedium
@@ -117,7 +177,7 @@ VERSION: 9
   UnlockCost: 13, display: true					# ADDED
   UnlockLevel: 20, display: true				# 1 (ADDED display:)
   TechTreeParent: PistolEpic					# ADDED
-  NrSlots: 5, type: int, display: true		# ADDED
+  NrSlots: 4, type: int, display: true		# was 3 , max is 4
   Heat: 800, type: int, display: true
   Cold: 273, type: int, display: true
   Radiation: 40, type: int, display: true
@@ -125,6 +185,7 @@ VERSION: 9
   TechTreeNames: "alienweapons"
 }
 
+# Recipes
 { Template Name: ArmorMedium
   DeconOverride: Continue
   CraftTime: 90
@@ -181,7 +242,25 @@ VERSION: 9
 }
 
 ###########################################################
-# EVA booster recipes
+# Booster ItemsConfig
+{ Item Id: 2673, Name: InsulationBoost, Ref: ArmorBoostTemplate
+  Cold: 70, type: int, display: true  # was 25
+}
+
+###########################################################
+# Booster Templates
+# Recipes are based off of
+#{ +Template Name: EVABoost
+#  CraftTime: 100  
+#  Target: "HoverC,BaseC,SmallC,LargeC,AdvC"
+#  { Child Inputs
+#    SteelPlate: 1
+#    OpticalFiber: 1 
+#    Nanotubes: 2
+#    GoldIngot: 1
+#  }
+#}
+
 { Template Name: JetpackBoost
   CraftTime: 100
   Target: "AdvC"
@@ -199,8 +278,7 @@ VERSION: 9
   Target: "AdvC"
   { Child Inputs
     SteelPlate: 10
-    Electronics: 5
-    Motor: 4
+    SathiumIngot: 2
     GoldIngot: 3
   }
 }
@@ -209,8 +287,7 @@ VERSION: 9
   Target: "AdvC"
   { Child Inputs
     SteelPlate: 3
-    Electronics: 5
-    Nanotubes: 30
+    ErestrumIngot: 3
     GoldIngot: 3
   }
 }
@@ -220,8 +297,7 @@ VERSION: 9
   Target: "AdvC"
   { Child Inputs
     SteelPlate: 6
-    Electronics: 2
-    Nanotubes: 10
+    ZascosiumIngot: 2
     GoldIngot: 3
   }
 }
@@ -230,8 +306,7 @@ VERSION: 9
   Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 3
-    Electronics: 5
-    Nanotubes: 30
+	ErestrumIngot: 2
     GoldIngot: 3
   }
 }
@@ -240,8 +315,7 @@ VERSION: 9
   Target: "LargeC,AdvC"
   { Child Inputs
     SteelPlate: 5
-    OpticalFiber: 10
-    Nanotubes: 20
+    NeodymiumIngot: 2
     GoldIngot: 3
   }
 }
@@ -250,44 +324,15 @@ VERSION: 9
   Target: "AdvC"
   { Child Inputs
     SteelPlate: 5
-    Electronics: 5
-    PlasticMaterial: 10
-    Motor: 4
+    NeodymiumIngot: 2
+    Motor: 5
     GoldIngot: 3
   }
 }
 
 
-{ +Template Name: EVABoost
-  CraftTime: 100  
-  Target: "HoverC,BaseC,SmallC,LargeC,AdvC"
-  { Child Inputs
-    SteelPlate: 1
-    OpticalFiber: 1 
-    Nanotubes: 2
-    GoldIngot: 1
-  }
-}
-
-
-{ Item Id: 2673, Name: InsulationBoost, Ref: ArmorBoostTemplate
-  Cold: 100, type: int, display: true  # tripled
-}
-
 #################################################################
 # Weapons
-{ Template Name: AssaultRifleEpic
-  DeconOverride: Continue
-  CraftTime: 5
-  Target: "AdvC"
-  { Child Inputs
-    CobaltAlloy: 5
-    XenoSubstrate: 20
-    ZascosiumAlloy: 10
-    GoldIngot: 10
-    AssaultRifleT2: 1
-  }
-}
 { Item Id: 2072, Name: AssaultRifleEpic, Ref: AssaultRifle
   PickupToToolbar: true
   Durability: 500, display: false
@@ -312,22 +357,21 @@ VERSION: 9
   UnlockLevel: 22
   TechTreeNames: "alienweapons"
 }
-
-
-# Lazer Minigun (Epic) in the tree
-{ Template Name: MinigunEpic
+{ Template Name: AssaultRifleEpic
   DeconOverride: Continue
-  CraftTime: 300
+  CraftTime: 5
   Target: "AdvC"
   { Child Inputs
-    MechanicalComponents: 10
     CobaltAlloy: 5
     XenoSubstrate: 20
     ZascosiumAlloy: 10
-    Motor: 2
-    Minigun: 1
+    GoldIngot: 10
+    AssaultRifleT2: 1
   }
 }
+
+
+# Lazer Minigun (Epic) in the tree
 { Item Id: 2074, Name: MinigunEpic, Ref: Minigun
   PickupToToolbar: true
   Durability: 500, display: false
@@ -354,8 +398,7 @@ VERSION: 9
   UnlockLevel: 22
   TechTreeNames: "alienweapons"
 }
-
-{ Template Name: Shotgun2Epic
+{ Template Name: MinigunEpic
   DeconOverride: Continue
   CraftTime: 300
   Target: "AdvC"
@@ -365,9 +408,10 @@ VERSION: 9
     XenoSubstrate: 20
     ZascosiumAlloy: 10
     Motor: 2
-    Shotgun2: 1
+    Minigun: 1
   }
 }
+
 { Item Id: 2075, Name: Shotgun2Epic, Ref: Shotgun2
   PickupToToolbar: true
   Durability: 500, display: false
@@ -392,16 +436,14 @@ VERSION: 9
   }
   {
   }
-  TechTreeParent: PistolEpic					# ADDED
+  TechTreeParent: DrillEpic					# ADDED
   UnlockCost: 15
   UnlockLevel: 25
   TechTreeNames: "alienweapons"
 }
-
-# "Plasma Cannon (Epic)" in the tech tree view
-{ Template Name: ScifiCannonEpic
+{ Template Name: Shotgun2Epic
   DeconOverride: Continue
-  CraftTime: 480
+  CraftTime: 300
   Target: "AdvC"
   { Child Inputs
     MechanicalComponents: 10
@@ -409,9 +451,11 @@ VERSION: 9
     XenoSubstrate: 20
     ZascosiumAlloy: 10
     Motor: 2
-    ScifiCannon: 1
+    Shotgun2: 1
   }
 }
+
+# "Plasma Cannon (Epic)" in the tech tree view
 { Item Id: 2077, Name: ScifiCannonEpic, Ref: ScifiCannon
   PickupToToolbar: true
   Durability: 700, display: false
@@ -425,13 +469,12 @@ VERSION: 9
   }
   UnlockCost: 15
   UnlockLevel: 25
-  TechTreeParent: MinigunEpic					# ADDED
+  TechTreeParent: DrillEpic					# ADDED
   TechTreeNames: "alienweapons"
 }
-# "EM Pulse Rifle (Epic)" in the tech tree view
-{ Template Name: PulseRifleEpic
+{ Template Name: ScifiCannonEpic
   DeconOverride: Continue
-  CraftTime: 400
+  CraftTime: 480
   Target: "AdvC"
   { Child Inputs
     MechanicalComponents: 10
@@ -439,9 +482,11 @@ VERSION: 9
     XenoSubstrate: 20
     ZascosiumAlloy: 10
     Motor: 2
-    PulseRifleT2: 1
+    ScifiCannon: 1
   }
 }
+
+# "EM Pulse Rifle (Epic)" in the tech tree view
 { Item Id: 2086, Name: PulseRifleEpic, Ref: PulseRifleT2
   PickupToToolbar: true
   Durability: 500, display: false
@@ -469,9 +514,7 @@ VERSION: 9
   UnlockLevel: 25
   TechTreeNames: "alienweapons"
 }
-
-#
-{ Template Name: RocketLauncherEpic
+{ Template Name: PulseRifleEpic
   DeconOverride: Continue
   CraftTime: 400
   Target: "AdvC"
@@ -481,9 +524,11 @@ VERSION: 9
     XenoSubstrate: 20
     ZascosiumAlloy: 10
     Motor: 2
-    RocketLauncher: 1
+    PulseRifleT2: 1
   }
 }
+
+#
 { Item Id: 2082, Name: RocketLauncherEpic, Ref: RocketLauncherT2
   PickupToToolbar: true
   BlastRadius: 3, display: true
@@ -505,10 +550,9 @@ VERSION: 9
   UnlockLevel: 25
   TechTreeNames: "alienweapons"
 }
-# "Plasma Rifle (Epic)" in the tech tree view
-{ Template Name: LaserRifleEpic
+{ Template Name: RocketLauncherEpic
   DeconOverride: Continue
-  CraftTime: 300
+  CraftTime: 400
   Target: "AdvC"
   { Child Inputs
     MechanicalComponents: 10
@@ -516,12 +560,11 @@ VERSION: 9
     XenoSubstrate: 20
     ZascosiumAlloy: 10
     Motor: 2
-    LaserRifle: 1
+    RocketLauncher: 1
   }
-  UnlockCost: 15
-  UnlockLevel: 25
-  TechTreeNames: "alienweapons"
 }
+
+# "Plasma Rifle (Epic)" in the tech tree view
 { Item Id: 2076, Name: LaserRifleEpic, Ref: LaserRifle
   PickupToToolbar: true
   Durability: 500, display: false
@@ -544,23 +587,27 @@ VERSION: 9
   }
   TechTreeParent: MinigunEpic					# ADDED
   UnlockCost: 15
-  UnlockLevel: 20
+  UnlockLevel: 25
+  TechTreeNames: "alienweapons"
+}
+{ Template Name: LaserRifleEpic
+  DeconOverride: Continue
+  CraftTime: 300
+  Target: "AdvC"
+  { Child Inputs
+    MechanicalComponents: 10
+    CobaltAlloy: 5
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 2
+    LaserRifle: 1
+  }
+  UnlockCost: 15
+  UnlockLevel: 25
   TechTreeNames: "alienweapons"
 }
 
-{ Template Name: PistolEpic
-  DeconOverride: Continue
-  CraftTime: 200
-  Target: "AdvC"
-  { Child Inputs
-    PistolT2: 1
-    MechanicalComponents: 10
-    XenoSubstrate: 20
-    ZascosiumAlloy: 10
-    PlasticMaterial: 30
-    GoldIngot: 10
-  }
-}
+# epic pistol
 { Item Id: 2078, Name: PistolEpic, Ref: PistolT2
   PickupToToolbar: true
   Durability: 500, display: false
@@ -584,23 +631,21 @@ VERSION: 9
   UnlockLevel: 15
   TechTreeNames: "alienweapons"
 }
-
-## epic drill
-{ Template Name: DrillEpic
+{ Template Name: PistolEpic
   DeconOverride: Continue
   CraftTime: 200
   Target: "AdvC"
   { Child Inputs
-    DrillT2: 1
+    PistolT2: 1
+    MechanicalComponents: 10
     XenoSubstrate: 20
     ZascosiumAlloy: 10
-    Motor: 6
-    CapacitorComponent: 20
-    Nanotubes: 20
     PlasticMaterial: 30
     GoldIngot: 10
   }
 }
+
+## epic drill
 { Item Id: 2088, Name: DrillEpic, Ref: DrillT2
   {
     Damage: 750
@@ -616,6 +661,22 @@ VERSION: 9
   UnlockLevel: 20    # changed
   TechTreeNames: "alienweapons"
 }
+{ Template Name: DrillEpic
+  DeconOverride: Continue
+  CraftTime: 200
+  Target: "AdvC"
+  { Child Inputs
+    DrillT2: 1
+    XenoSubstrate: 20
+    ZascosiumAlloy: 10
+    Motor: 6
+    CapacitorComponent: 20
+    Nanotubes: 20
+    PlasticMaterial: 30
+    GoldIngot: 10
+  }
+}
+
 # T2 shield gen was missing from constructors
 { Template Name: ShieldGeneratorCVT2
   DeconOverride: Continue
@@ -644,6 +705,7 @@ VERSION: 9
   }
 }
 
+#########################################################
 ## start kit
 { +LootGroup Name: EscapePodEasy
   Count: all
@@ -655,16 +717,16 @@ VERSION: 9
   Item_5: Sniper, param1:1
   Item_6: Shotgun, param1:1
   Item_7: 12.7mmBullet, param1:20
-  Item_8: ShotgunShells, param1:20
+  Item_8: ShotgunShells, param1:30
   Item_9: Chainsaw, param1:1
   Item_10: BioFuel, param1:15
-  Item_11: AssaultRifle, param1:1
-  Item_12: 5.8mmBullet, param1:50
+  Item_11: Nanotubes, param1:"5,10"
+  Item_12: SteelPlate, param1:"20,30"
   Item_13: Bandages, param1:5
-  Item_14: IronIngot, param1:"50,100"
-  Item_15: CopperIngot, param1:"100,200"
-  Item_16: SiliconIngot, param1:"100,200"
-  Item_17: CobaltIngot, param1:"5,10"
+  Item_14: IronOre, param1:"50,100"
+  Item_15: CopperOre, param1:"100,200"
+  Item_16: SiliconOre, param1:"100,200"
+  Item_17: CobaltOre, param1:"5,10"
   Item_18: PromethiumPellets, param1:"20,30"
   Item_19: PlasticMaterial, param1:"20,30"
   Item_20: EnergyCell, param1:"5,10"
@@ -673,12 +735,10 @@ VERSION: 9
   Item_23: Computer, param1:"3,5"
   Item_24: OpticalFiber, param1:"5,10"
   Item_25: Electronics, param1:"5,10"
-  Item_26: Nanotubes, param1:"5,10"
-  Item_27: SteelPlate, param1:"20,30"
 }
 
 { +LootGroup Name: EscapePodMedium
-  Count: 22 # up to Magnesium
+  Count: 17 # up to cobalt
   Item_0: EmergencyRations, param1: 2
   Item_1: WaterBottle, param1: 5
   Item_2: RadarSuitT1, param1: 1
@@ -687,16 +747,16 @@ VERSION: 9
   Item_5: Sniper, param1:1
   Item_6: Shotgun, param1:1
   Item_7: 12.7mmBullet, param1:20
-  Item_8: ShotgunShells, param1:20
+  Item_8: ShotgunShells, param1:30
   Item_9: Chainsaw, param1:1
   Item_10: BioFuel, param1:15
-  Item_11: AssaultRifle, param1:1
-  Item_12: 5.8mmBullet, param1:50
+  Item_11: Nanotubes, param1:"5,10"
+  Item_12: SteelPlate, param1:"20,30"
   Item_13: Bandages, param1:5
-  Item_14: IronIngot, param1:"50,100"
-  Item_15: CopperIngot, param1:"100,200"
-  Item_16: SiliconIngot, param1:"100,200"
-  Item_17: CobaltIngot, param1:"5,10"
+  Item_14: IronOre, param1:"50,100"
+  Item_15: CopperOre, param1:"100,200"
+  Item_16: SiliconOre, param1:"100,200"
+  Item_17: CobaltOre, param1:"5,10"
   Item_18: PromethiumPellets, param1:"20,30"
   Item_19: PlasticMaterial, param1:"20,30"
   Item_20: EnergyCell, param1:"5,10"
@@ -704,13 +764,10 @@ VERSION: 9
   Item_22: MechanicalComponents, param1:"20,30"
   Item_23: Computer, param1:"3,5"
   Item_24: OpticalFiber, param1:"5,10"
-  Item_25: Electronics, param1:"5,10"
-  Item_26: Nanotubes, param1:"5,10"
-  Item_27: SteelPlate, param1:"20,30"
-}
+  Item_25: Electronics, param1:"5,10"}
 
 { +LootGroup Name: EscapePodHard
-  Count: 16  # up to ingots
+  Count: 15  # up to ores
   Item_0: EmergencyRations, param1: 2
   Item_1: WaterBottle, param1: 5
   Item_2: RadarSuitT1, param1: 1
@@ -719,16 +776,16 @@ VERSION: 9
   Item_5: Sniper, param1:1
   Item_6: Shotgun, param1:1
   Item_7: 12.7mmBullet, param1:20
-  Item_8: ShotgunShells, param1:20
+  Item_8: ShotgunShells, param1:30
   Item_9: Chainsaw, param1:1
   Item_10: BioFuel, param1:15
-  Item_11: AssaultRifle, param1:1
-  Item_12: 5.8mmBullet, param1:50
+  Item_11: Nanotubes, param1:"5,10"
+  Item_12: SteelPlate, param1:"20,30"
   Item_13: Bandages, param1:5
-  Item_14: IronIngot, param1:"50,100"
-  Item_15: CopperIngot, param1:"100,200"
-  Item_16: SiliconIngot, param1:"100,200"
-  Item_17: CobaltIngot, param1:"5,10"
+  Item_14: IronOre, param1:"50,100"
+  Item_15: CopperOre, param1:"100,200"
+  Item_16: SiliconOre, param1:"100,200"
+  Item_17: CobaltOre, param1:"5,10"
   Item_18: PromethiumPellets, param1:"20,30"
   Item_19: PlasticMaterial, param1:"20,30"
   Item_20: EnergyCell, param1:"5,10"
@@ -737,6 +794,4 @@ VERSION: 9
   Item_23: Computer, param1:"3,5"
   Item_24: OpticalFiber, param1:"5,10"
   Item_25: Electronics, param1:"5,10"
-  Item_26: Nanotubes, param1:"5,10"
-  Item_27: SteelPlate, param1:"20,30"
 }
