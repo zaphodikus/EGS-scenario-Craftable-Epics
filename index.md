@@ -1,8 +1,12 @@
 # Welcome to @Zaphodikus Empyrion Galactic Homepage
 
 ## Craftable Epics
+A scenario or mod for the Empyrion Galactic survival game
+[Zaphodikus Steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2337746040)
+
 ![Craftable Epics Logo](/art/preview.jpg?raw=true "Preview Image")
-##= Craftable Epics, for the golden age
+
+### Craftable Epics, for the golden age
 I designed this configuration mod as a subset of the game changes I have been playing for a long time now. This works in single player and does not change play balance significantly enough to make multiplayer any less fun, if not more. You start with some resources and a decent weapon, which basically skips the tedium of day 1 and 2 in-game.
 
 Best played with medium tech advances, and every other setting amped up to hardest difficulty. If you are a senior gamer like myself, you will probably be playing on this kind of difficulty setting, and love the ability to get epics without risking your life. Expecially if you prefer an almost-hardcore style
