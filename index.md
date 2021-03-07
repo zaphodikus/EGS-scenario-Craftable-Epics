@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Welcome to @Zaphodikus Empyrion Galactic Homepage
+
+## Craftable Epics
+![Craftable Epics Logo](/art/preview.jpg?raw=true "Preview Image")
+##= Craftable Epics, for the golden age
+I designed this configuration mod as a subset of the game changes I have been playing for a long time now. This works in single player and does not change play balance significantly enough to make multiplayer any less fun, if not more. You start with some resources and a decent weapon, which basically skips the tedium of day 1 and 2 in-game.
+
+Best played with medium tech advances, and every other setting amped up to hardest difficulty. If you are a senior gamer like myself, you will probably be playing on this kind of difficulty setting, and love the ability to get epics without risking your life. Expecially if you prefer an almost-hardcore style
+* Almost all epic items are craft-able, you will need the prior-level item to the epic, an Advanced constructor, some gold and a few other rare materials * for each epic item.
+* Bio fuel is a bit easier to make. Chainsaw runs for a bit longer.
+* T2 shield gen
+* Suit boosters are craft-able
+
+I may have left a gift in one of the large constructors.
+
+Vanilla playfields are Version 1.3 build 3209
+
+![Loader image](/art/1.jpg?raw=true "Loader image")
+![Loader image](/art/2.jpg?raw=true "Loader image")
+![Loader image](/art/3.jpg?raw=true "Loader image")
+![Loader image](/art/4.jpg?raw=true "Loader image")
 
 You can use the [editor on GitHub](https://github.com/zaphodikus/EGS-scenario-Craftable-Epics/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zaphodikus/EGS-scenario-Craftable-Epics/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
