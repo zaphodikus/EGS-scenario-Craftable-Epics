@@ -1,7 +1,7 @@
 # Welcome to @Zaphodikus Empyrion Galactic Homepage
-![Craftable Epics Logo](../art/preview.jpg?raw=true "Preview Image")
+![Craftable Epics Logo](https://github.com/zaphodikus/EGS-scenario-Craftable-Epics/tree/main/art/preview.jpg)
 
-![Better Aim Reticle](../art/better.jpg?raw=true "Preview Image")
+![Better Aim Reticle](https://github.com/zaphodikus/EGS-scenario-Craftable-Epics/tree/main/art/better.jpg "Preview Image")
 
 ## Craftable Epics
 A scenario or mod for the Empyrion Galactic survival game
