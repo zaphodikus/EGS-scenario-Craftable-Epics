@@ -1,5 +1,5 @@
 # Welcome to @Zaphodikus Empyrion Galactic Homepage
-![Craftable Epics Logo](art/preview.jpg?raw=true "Preview Image")
+![Craftable Epics Logo](ce.jpg?raw=true "Preview Image")
 
 ![Better Aim Reticle](art/better.jpg?raw=true "Preview Image")
 
